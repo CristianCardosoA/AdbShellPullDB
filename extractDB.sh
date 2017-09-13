@@ -20,7 +20,7 @@ div=======================================
 PROGRAM=""
 DEFAULT=NO
 ##INSERT A DEFAULT
-APP_ID='com.jjkeller.kmb'
+APP_ID='com.ccardoso.mx'
 
 #_read_options(){
 
