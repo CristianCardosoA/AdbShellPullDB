@@ -57,16 +57,16 @@ else
 	dd if=backup.ab bs=1 skip=24 | python -c "import zlib,sys;sys.stdout.write(zlib.decompress(sys.stdin.read()))" > backup.tar
 	tar -xf backup.tar
 	echo "Extracting database"
-	if  [ ! -e "./apps/com.jjkeller.kmb/db/kmb" ]; then
+	if  [ ! -e "./apps/com.ccardoso.mx/db/mxb" ]; then
 		echo -e "${RED} Unable to get database from: $APP_ID ${NC}"
 	else
-		mv ./apps/com.jjkeller.kmb/db/kmb databaseKMB_$today.db
+		mv ./apps/com.ccardoso.mx/db/mxb databaseMXB_$today.db
         	rm -rf ./app*
         	rm back*
-        	echo -e "${GREEN} Database extracted: databaseKMB_$today.db ${NC}"
+        	echo -e "${GREEN} Database extracted: databaseMXB_$today.db ${NC}"
         	if [ ! -z "$PROGRAM" ]; then
                 	echo -e "${GREEN} Trying to open database program ${NC}"
-                	open -a "/Applications/DB Browser for SQLite.app" databaseKMB_$today.db
+                	open -a "/Applications/DB Browser for SQLite.app" databaseMXB_$today.db
         	fi
 	fi
 fi
